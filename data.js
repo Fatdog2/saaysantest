@@ -1,5 +1,4 @@
 const dataset = {
-	"table": "summary_data",
 	"rows":
 	[
 		{
