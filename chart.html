@@ -11,15 +11,18 @@
 </head>
 <body>
     <div class="flex-container">
+            <div> <div>Day Range</div>
+            <select id="dayRange" onchange="updateChart()"> Day Range
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                    <option value="90">90</option>
+                    <option value="120">120</option>
+                    <option value="360">360</option>
+                </select></div>
+           
         <canvas id="myChart" width="600" height="600" ></canvas>
         <button id="toggleButton" onclick="changeChart()"> Change Chart Type </button>
-        <select id="dayRange" onchange="updateChart()"> Day Range
-            <option value="30">30</option>
-            <option value="60">60</option>
-            <option value="90">90</option>
-            <option value="120">120</option>
-            <option value="360">360</option>
-        </select>
+        
     </div>
     <script src="/data.js"></script>
     <script src="/script.js"></script>

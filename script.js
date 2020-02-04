@@ -21,7 +21,7 @@ var mychart = new Chart(ctx, {
     data: {
         labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
         datasets: [{
-            label: 'Summary Data',
+            label: 'Web Usage',
             backgroundColor: 'rgb(255, 0, 0)',
             borderColor: 'rgb(0, 255, 132)',
             data: valuesArray
@@ -53,7 +53,7 @@ function updateChart(){
             data: {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
-                    label: 'Summary Data',
+                    label: 'Web Usage',
                     backgroundColor: 'rgb(255, 0, 0)',
                     borderColor: 'rgb(0, 255, 132)',
                     data: valuesArray
@@ -75,7 +75,7 @@ function updateChart(){
             data: {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
-                    label: 'Summary Data',
+                    label: 'Web Usage',
                     backgroundColor: 'rgb(255, 0, 0)',
                     borderColor: 'rgb(0, 255, 132)',
                     data: valuesArray
@@ -171,7 +171,7 @@ function changeChart() {
             data: {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
-                    label: 'Summary Data',
+                    label: 'Web Usage',
                     backgroundColor: 'rgb(255, 0, 0)',
                     borderColor: 'rgb(0, 255, 132)',
                     data: valuesArray
@@ -196,7 +196,7 @@ function changeChart() {
             data: {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
-                    label: 'Summary Data',
+                    label: 'Web Usage',
                     backgroundColor: 'rgb(255, 0, 0)',
                     borderColor: 'rgb(0, 255, 132)',
                     data: valuesArray

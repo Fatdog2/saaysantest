@@ -1,7 +1,12 @@
 .flex-container {
     display: flex;
     justify-content: center;
+    width: 100%
 }
 
+
+#dayRange {
+    height: 50px
+}
 
 
