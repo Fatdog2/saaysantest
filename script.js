@@ -11,26 +11,34 @@ processData(30)
 
 
 //Chart
-let chartState = 'pie'
+let chartState = 'doughnut'
 var ctx = document.getElementById('myChart').getContext('2d');
 var mychart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'pie',
+    type: 'doughnut',
 
     // The data for our dataset
     data: {
         labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
         datasets: [{
             label: 'Web Usage',
-            backgroundColor: 'rgb(255, 0, 0)',
-            borderColor: 'rgb(0, 255, 132)',
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderColor: 'rgb(255, 255, 255)',
             data: valuesArray
         }]
     },
 
     // Configuration options go here
     options: {
-        responsive: false
+        responsive: false,
+        cutoutPercentage: 40
     }
 });
 
@@ -44,25 +52,33 @@ function updateChart(){
     processData(dayrange)
 
     mychart.destroy()
-    if(chartState == 'pie'){
+    if(chartState == 'doughnut'){
          mychart = new Chart(ctx, {
             // The type of chart we want to create
-            type: 'pie',
+            type: 'doughnut',
         
             // The data for our dataset 
             data: {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
                     label: 'Web Usage',
-                    backgroundColor: 'rgb(255, 0, 0)',
-                    borderColor: 'rgb(0, 255, 132)',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: 'rgb(255, 255, 255)',
                     data: valuesArray
                 }]
             },
         
             // Configuration options go here
             options: {
-                responsive: false
+                responsive: false,
+                cutoutPercentage: 40
             }
         });
     }
@@ -76,8 +92,15 @@ function updateChart(){
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
                     label: 'Web Usage',
-                    backgroundColor: 'rgb(255, 0, 0)',
-                    borderColor: 'rgb(0, 255, 132)',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: 'rgb(255, 255, 255)',
                     data: valuesArray
                 }]
             },
@@ -162,7 +185,7 @@ function onlyUnique(value, index, self){
 
 function changeChart() {
     mychart.destroy();
-    if(chartState == 'pie'){
+    if(chartState == 'doughnut'){
             mychart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'bar',
@@ -172,8 +195,15 @@ function changeChart() {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
                     label: 'Web Usage',
-                    backgroundColor: 'rgb(255, 0, 0)',
-                    borderColor: 'rgb(0, 255, 132)',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: 'rgb(255, 255, 255)',
                     data: valuesArray
                 }]
             },
@@ -190,25 +220,33 @@ function changeChart() {
     else { 
         mychart = new Chart(ctx, {
             // The type of chart we want to create
-            type: 'pie',
+            type: 'doughnut',
         
             // The data for our dataset
             data: {
                 labels: [namesArray[0],namesArray[1],namesArray[2],namesArray[3],namesArray[4]],
                 datasets: [{
                     label: 'Web Usage',
-                    backgroundColor: 'rgb(255, 0, 0)',
-                    borderColor: 'rgb(0, 255, 132)',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: 'rgb(255, 255, 255)',
                     data: valuesArray
                 }]
             },
         
             // Configuration options go here
             options: {
-                responsive: false
+                responsive: false,
+                cutoutPercentage: 40
             }
         });
-        chartState = 'pie'
+        chartState = 'doughnut'
     }
     
 

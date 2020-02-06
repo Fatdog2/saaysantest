@@ -1,12 +1,110 @@
 .flex-container {
     display: flex;
     justify-content: center;
-    width: 100%
+    width: 100%;
+    padding-top: 10px;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    flex-direction: column;
+    padding-right: 50px
 }
 
 
-#dayRange {
-    height: 50px
+
+
+#dayRangeBox {
+    padding-bottom: 30px;
+    font-family: Arial;
+    
 }
 
 
+#toggleButton {
+    transition: background 250ms ease-in-out, 
+                transform 300ms ease;
+    height: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    width: 230px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+#toggleButton:hover
+{
+    transform:scale(0.95);
+    background: darkblue;
+}
+
+#toggleButton:focus{
+    outline: 1px solid #fff;
+}
+
+
+select{ 
+appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #0069ed;
+  background-image: none;
+  padding-left: 10px;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+select:focus { 
+    outline: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: darkblue;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: darkblue;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
