@@ -144,6 +144,7 @@ for(i=0; i < namesArray.length; i++){
 
 
 //Extracting the second column to parse to the chart
+console.log(goodData)
 goodData.sort(compareSecondColumn);
 function compareSecondColumn(a, b) {
     if (a[1] === b[1]) {
@@ -160,7 +161,18 @@ function compareSecondColumn(a, b) {
 for(i=0; i < 5; i++){
     valuesArray.push(goodData[i][1])
 }
+
+//Emptying the current names array and then making it so namesarray has the correct order of names
+namesArray = []
+for(i=0; i < 5; i++){
+    namesArray.push(goodData[i][0])
 }
+
+}
+
+
+
+
 
 //Functions 
 
